@@ -29,10 +29,10 @@ class Directory extends React.Component {
         return (
             <React.Fragment>
                 {
-                    sections.map((currentSection) => (
+                    sections.map(({ id, ...currentSectionProps }) => (
                         <MenuItem 
-                            key={ currentSection.id }
-                            { ...currentSection }
+                            key={ id }
+                            { ...currentSectionProps }
                         />
                     ))
                 }
